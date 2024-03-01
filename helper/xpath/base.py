@@ -9,3 +9,4 @@ open_police_accessories = '//div[@class="col-xs-12"]/div/ul/li//a[contains(@href
 sneakers = '//div/a[contains(@href,"katalog/obuv/obuvv/krossovki")]/img'
 fishing_hunting ='//div[contains(@class,"mainmenu")]/ul[@class="list-unstyled"]/li/a[contains(@href,"katalog/ryibalka-i-ohota/")]'
 about_title = '//h1[@class="col-xs-12"]'
+tourism_and_camping = "//div[contains(@class, 'mainmenu ')]/ul[contains(@class,'list-unstyled')]/li/a[contains(@href,'/katalog/pohodnoe-snaryazhenie')]"
