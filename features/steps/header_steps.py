@@ -17,6 +17,17 @@ def open_homepage(context):
     context.base_page.open()
 
 
+@when('I open Homepage custom size screen "{size}"')
+def open_homepage(context, size):
+    option = Options()
+    prefs = {"profile.default_content_setting_values.notifications": 1}
+    option.add_experimental_option("prefs", prefs)
+    option.add_argument(f"--window-size={getattr(base, size)}")
+    context.browser = webdriver.Chrome(options=option)
+    context.base_page = pages.BasePage(context.browser)
+    context.base_page.open()
+
+
 @then('I switch to ua language')
 def switch_to_ua(context):
     context.base_page.switch_to_ua()
